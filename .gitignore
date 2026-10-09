@@ -1,0 +1,9 @@
+# Laufzeitdaten des Servers
+raumtemps.json
+# Virtuelle Python-Umgebung
+.venv/
+venv/
+__pycache__/
+*.pyc
+# Wird von setup.sh erzeugt
+restserver/start.sh
