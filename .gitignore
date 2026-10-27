@@ -5,5 +5,21 @@ raumtemps.json
 venv/
 __pycache__/
 *.pyc
-# Wird von setup.sh erzeugt
 restserver/start.sh
+ERKLAERUNG.md
+LABORHEFT.md
+LABORHEFT_interaktiv.pdf
+/tools
+# Python-Build- und Cache-Dateien
+*.pyo
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+# Geheimnisse und Logs
+.env
+*.log
+# Editor- und Betriebssystem-Dateien
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

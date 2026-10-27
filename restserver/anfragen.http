@@ -1,0 +1,34 @@
+### Für die VS-Code-Erweiterung "REST Client". Klick auf "Send Request" über der Anfrage.
+
+### Alle Datensätze
+GET http://127.0.0.1:8080/raumtemps
+
+### Einen Datensatz abrufen
+GET http://127.0.0.1:8080/raumtemps/1
+
+### Nicht vorhandene ID (erwartet 404)
+GET http://127.0.0.1:8080/raumtemps/99
+
+### POST mit URL-Parametern
+POST http://127.0.0.1:8080/raumtemps?temp=32.9&ort=Raum%203.18
+
+### POST mit JSON im Body
+POST http://127.0.0.1:8080/raumtemps
+Content-Type: application/json
+
+{
+  "temp": 32.9,
+  "ort": "Raum 3.18",
+  "sensor": "ds18b20-1"
+}
+
+### POST ohne ort (erwartet 400)
+POST http://127.0.0.1:8080/raumtemps
+Content-Type: application/json
+
+{
+  "temp": 32.9
+}
+
+### Datensatz löschen
+DELETE http://127.0.0.1:8080/raumtemps/1
